@@ -1,0 +1,37 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro vetor[10], i, j, temp
+
+        escreva("Digite 10 números inteiros:\n")
+        
+        // Entrada de dados
+        para (i = 0; i < 10; i++)
+        {
+            escreva("Digite o ", i + 1, "º número: ")
+            leia(vetor[i])
+        }
+
+        // Ordenação do vetor em ordem decrescente (Bubble Sort)
+        para (i = 0; i < 9; i++)
+        {
+            para (j = i + 1; j < 10; j++)
+            {
+                se (vetor[i] < vetor[j])
+                {
+                    temp = vetor[i]
+                    vetor[i] = vetor[j]
+                    vetor[j] = temp
+                }
+            }
+        }
+
+        // Exibição dos valores em ordem decrescente
+        escreva("\nVetor em ordem decrescente:\n")
+        para (i = 0; i < 10; i++)
+        {
+            escreva(vetor[i], " ")
+        }
+    }
+}
